@@ -36,9 +36,9 @@ const ContentFeedPage = () => {
 			)}
 			{!activeProfile && (
 				<div className="font-main object-center self-center mt-[5%] text-xl ml-5">
-					you don't have an active profile, please{" "}
+					You don't have an active profile, please{" "}
 					<a href="/edit-profile" className="underline">
-						create one
+						CREATE ONE
 					</a>
 				</div>
 			)}

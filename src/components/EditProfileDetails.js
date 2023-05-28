@@ -86,14 +86,14 @@ const EditProfileDetails = ({ profile }) => {
 		};
 		setMessage("Uploading profile information ...");
 
-		await update({ name: name });
-		// setMessage("Profile updated.");
-		// setTxActive(false);
+		await update({ name, bio, coverPicture, attributes});
+		setMessage("Profile updated.");
+		setTxActive(false);
 
 		// only set the fee if a number greater than 0 is supplied
-		// if (followFee && followFee > 0) {
-		// 	await doUploadFollowPolicy();
-		// }
+		if (followFee && followFee > 0) {
+			await doUploadFollowPolicy();
+		}
 	};
 
 	// Sets up the follow policy object

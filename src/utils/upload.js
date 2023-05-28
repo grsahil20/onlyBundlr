@@ -35,6 +35,8 @@ export const upload = async (data) => {
 
 		const uploadUrl = `https://arweave.net/${tx.id}`
 		console.log(`JSON uploaded to ${uploadUrl}`);
+
+		return uploadUrl;
 	} catch (error) {
 		console.log("Error uploading:", error);
 		return "Error uploading";
